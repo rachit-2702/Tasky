@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    }
+    <title>TaskY</title>
+</head>
+<body style="background-color: #cfe0fa;" onload="loadExistingCards()">
+  <!-- Modal -->
+<div class="modal fade" id="NewTaskModal" tabindex="-1" aria-labelledby="NewTaskModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="NewTaskModalLabel">Add Task Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="imgurl" class="form-label">Image URL</label>
+          <input type="url" class="form-control" id="imgurl" aria-describedby="emailHelp">
+
+        </div>
+        <div class="mb-3">
+          <label for="taskTitle" class="form-label">Task Title</label>
+          <input type="text" class="form-control" id="taskTitle" aria-describedby="emailHelp">
+
+        </div>
+        <div class="mb-3">
+          <label for="taskType" class="form-label">Task Type</label>
+          <input type="text" class="form-control" id="taskType" aria-describedby="emailHelp">
+
+        </div>
+        <div class="mb-3">
+          <label for="taskDescription" class="form-label">Task Description</label>
+          <textarea id= "taskDescription" rows="6" class="form-control"></textarea>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="addNewCard()" data-bs-dismiss ="modal">Save changes</button>
+        <!-- onclick event listener -->
+      </div>
+    </div>
+  </div>
+</div>
+    <header>
+
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" style = "margin-top: -25px;padding-top: 18px;" >
+            <div class="container-fluid" style="margin-top: -1%;padding-top: 8px;padding-bottom: 5px;padding-right: 15px;color: blue;">
+              <a class="navbar-brand" href="#">Tasky</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+
+
+
+                </ul>
+                <form class="d-flex">
+
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NewTaskModal">
+                   +Add New
+                  </button>
+
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br>
+        </header>
+
+          <div class = "col-md-6 container">
+          <div class="input-group mb-3 shadow">
+
+            <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+            <span class="input-group-text btn" id="basic-addon1" style="background-color: rgb(207, 204, 204);border: black 2px;"><i class="fas fa-search"></i></span>
+          </div>
+          </div>
+          <br>
+
+<div class = "container">
+          <section  class="row task_container">
+
+    </section>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous">
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
